@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: e7d78b16ecf19764c9c0d73c888490c1
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: body
+    100002: Box001
+    100004: CATRigHub001
+    100006: CATRigHub002
+    100008: CATRigHub003
+    100010: CATRigLArm1
+    100012: CATRigLArm2
+    100014: CATRigLArmCollarbone
+    100016: CATRigLArmPalm
+    100018: CATRigLLeg1
+    100020: CATRigLLeg2
+    100022: CATRigLLegAnkle
+    100024: CATRigLLegPlatform
+    100026: CATRigRArm1
+    100028: CATRigRArm2
+    100030: CATRigRArmCollarbone
+    100032: CATRigRArmPalm
+    100034: CATRigRLeg1
+    100036: CATRigRLeg2
+    100038: CATRigRLegAnkle
+    100040: CATRigRLegPlatform
+    100042: CATRigSpine
+    100044: CATRigSpine1
+    100046: CATRigSpine2
+    100048: CATRigSpine3
+    100050: CATRigTail1
+    100052: CATRigTail1 1
+    100054: CATRigTail1 2
+    100056: CATRigTail1 3
+    100058: CATRigTail2
+    100060: CATRigTail2 1
+    100062: CATRigTail2 2
+    100064: CATRigTail2 3
+    100066: CATRigTail3
+    100068: CATRigTail3 1
+    100070: CATRigTail3 2
+    100072: CATRigTail3 3
+    100074: CATRigTail4
+    100076: CATRigTail4 1
+    100078: CATRigTail4 2
+    100080: CATRigTail4 3
+    100082: Character001
+    100084: Gem
+    100086: //RootNode
+    400000: body
+    400002: Box001
+    400004: CATRigHub001
+    400006: CATRigHub002
+    400008: CATRigHub003
+    400010: CATRigLArm1
+    400012: CATRigLArm2
+    400014: CATRigLArmCollarbone
+    400016: CATRigLArmPalm
+    400018: CATRigLLeg1
+    400020: CATRigLLeg2
+    400022: CATRigLLegAnkle
+    400024: CATRigLLegPlatform
+    400026: CATRigRArm1
+    400028: CATRigRArm2
+    400030: CATRigRArmCollarbone
+    400032: CATRigRArmPalm
+    400034: CATRigRLeg1
+    400036: CATRigRLeg2
+    400038: CATRigRLegAnkle
+    400040: CATRigRLegPlatform
+    400042: CATRigSpine
+    400044: CATRigSpine1
+    400046: CATRigSpine2
+    400048: CATRigSpine3
+    400050: CATRigTail1
+    400052: CATRigTail1 1
+    400054: CATRigTail1 2
+    400056: CATRigTail1 3
+    400058: CATRigTail2
+    400060: CATRigTail2 1
+    400062: CATRigTail2 2
+    400064: CATRigTail2 3
+    400066: CATRigTail3
+    400068: CATRigTail3 1
+    400070: CATRigTail3 2
+    400072: CATRigTail3 3
+    400074: CATRigTail4
+    400076: CATRigTail4 1
+    400078: CATRigTail4 2
+    400080: CATRigTail4 3
+    400082: Character001
+    400084: Gem
+    400086: //RootNode
+    2300000: Box001
+    2300002: Gem
+    3300000: Box001
+    3300002: Gem
+    4300000: body
+    4300002: Box001
+    4300004: Gem
+    7400000: Run
+    7400002: Jump
+    7400004: Take 001
+    9500000: //RootNode
+    13700000: body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 165
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 305
+      lastFrame: 325
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 302
+      lastFrame: 325
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0299999993
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 1
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 1
+  userData: 

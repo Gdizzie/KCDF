@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: 2784be08247d1324bb783f0022032529
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: hood
+    100004: wheelspare
+    100006: fueltank_0
+    100008: seatback_R
+    100010: seatback_L
+    100012: seatfront_R
+    100014: seatfront_L
+    100016: windshield
+    100018: wheelback_L
+    100020: wheelback_R
+    100022: suspensionback
+    100024: wheelfront_R
+    100026: wheelfront_L
+    100028: suspensionfront
+    100030: center
+    100032: Armature
+    100036: fueltankhandles
+    100038: Wheelspare
+    100040: fueltank
+    100042: Jeep
+    400000: //RootNode
+    400002: hood
+    400004: wheelspare
+    400006: fueltank_0
+    400008: seatback_R
+    400010: seatback_L
+    400012: seatfront_R
+    400014: seatfront_L
+    400016: windshield
+    400018: wheelback_L
+    400020: wheelback_R
+    400022: suspensionback
+    400024: wheelfront_R
+    400026: wheelfront_L
+    400028: suspensionfront
+    400030: center
+    400032: Armature
+    400036: fueltankhandles
+    400038: Wheelspare
+    400040: fueltank
+    400042: Jeep
+    2300002: fueltankhandles
+    3300002: fueltankhandles
+    4300000: Jeep
+    4300002: fueltank
+    4300004: Wheelspare
+    4300006: fueltankhandles
+    11100000: //RootNode
+    13700000: Wheelspare
+    13700002: fueltank
+    13700004: Jeep
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 1
+  userData: 

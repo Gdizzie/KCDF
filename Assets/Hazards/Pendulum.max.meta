@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: 55a8787d76210cc44aefe89e98ddeb0b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Box003
+    100002: Box004
+    100004: Cylinder002
+    100006: GeoSphere026
+    100008: GeoSphere027
+    100010: GeoSphere028
+    100012: GeoSphere029
+    100014: GeoSphere030
+    100016: GeoSphere031
+    100018: GeoSphere032
+    100020: GeoSphere033
+    100022: GeoSphere036
+    100024: GeoSphere037
+    100026: GeoSphere038
+    100028: GeoSphere039
+    100030: Object001
+    100032: //RootNode
+    400000: Box003
+    400002: Box004
+    400004: Cylinder002
+    400006: GeoSphere026
+    400008: GeoSphere027
+    400010: GeoSphere028
+    400012: GeoSphere029
+    400014: GeoSphere030
+    400016: GeoSphere031
+    400018: GeoSphere032
+    400020: GeoSphere033
+    400022: GeoSphere036
+    400024: GeoSphere037
+    400026: GeoSphere038
+    400028: GeoSphere039
+    400030: Object001
+    400032: //RootNode
+    2300000: Box003
+    2300002: Box004
+    2300004: Cylinder002
+    2300006: GeoSphere026
+    2300008: GeoSphere027
+    2300010: GeoSphere028
+    2300012: GeoSphere029
+    2300014: GeoSphere030
+    2300016: GeoSphere031
+    2300018: GeoSphere032
+    2300020: GeoSphere033
+    2300022: GeoSphere036
+    2300024: GeoSphere037
+    2300026: GeoSphere038
+    2300028: GeoSphere039
+    2300030: Object001
+    3300000: Box003
+    3300002: Box004
+    3300004: Cylinder002
+    3300006: GeoSphere026
+    3300008: GeoSphere027
+    3300010: GeoSphere028
+    3300012: GeoSphere029
+    3300014: GeoSphere030
+    3300016: GeoSphere031
+    3300018: GeoSphere032
+    3300020: GeoSphere033
+    3300022: GeoSphere036
+    3300024: GeoSphere037
+    3300026: GeoSphere038
+    3300028: GeoSphere039
+    3300030: Object001
+    4300000: Box003
+    4300002: GeoSphere026
+    4300004: GeoSphere027
+    4300006: GeoSphere028
+    4300008: GeoSphere029
+    4300010: GeoSphere030
+    4300012: GeoSphere031
+    4300014: GeoSphere032
+    4300016: GeoSphere033
+    4300018: Cylinder002
+    4300020: GeoSphere036
+    4300022: GeoSphere037
+    4300024: GeoSphere038
+    4300026: Object001
+    4300028: Box004
+    4300030: GeoSphere039
+    7400000: SwingForward
+    7400002: SwingBackward
+    7400004: Swing
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SwingForward
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: SwingBackward
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Swing
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 1
+  userData: 

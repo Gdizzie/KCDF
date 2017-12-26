@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d8cd7e379c2ccc242af04f0746d2d65b
+labels:
+- audio
+- clockstone
+- toolkit
+- framework
+- scripts
+- pooling
+- singleton
+- pool
+- sound
+- object
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

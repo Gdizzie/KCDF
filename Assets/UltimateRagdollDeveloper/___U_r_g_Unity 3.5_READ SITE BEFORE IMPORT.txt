@@ -1,0 +1,27 @@
+﻿2013-01-13
+ULTIMATE RAGDOLL GENERATOR
+© THE ARC GAMES STUDIO 2013
+http://unity.thearcgames.com
+
+
+*** URG! ASSETS FOR UNITY 3.5 ***
+*** THESE INSTRUCTIONS ARE A COPY OF THE CONTENT FROM URG SITE ***
+
+In the case that URG! is going to be used in a 3.5 release, follow these steps for proper installation:
+
+1- Backup the original project (the whole project folder, not just the asset folder)
+2- Access the asset store, begin import of the URG! package, and please wait until the import file selection appears
+3- When the file import window comes up, press NONE at the bottom, and only select the last file in the list, which is URG's latest version for Unity 3.5
+4- Double click on the new file in the project
+5- Complete the new asset import process, and the latest URG version is now available. Have fun creating awesome ragdolls!
+
+CONTACTS
+You can contact us for info and support through our site
+http://unity.thearcgames.com
+or by sending an e-mail to unitysupport@thearcgames.com
+
+Our youtube channel:
+http://www.youtube.com/user/TheArcGamesStudio?feature=mhee
+
+Unity forums thread:
+http://forum.unity3d.com/threads/107501-Release-URG!-The-ultimate-ragdoll-generator
