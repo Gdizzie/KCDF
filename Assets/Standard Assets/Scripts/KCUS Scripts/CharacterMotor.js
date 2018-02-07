@@ -194,7 +194,7 @@ var dash : CharacterMotorDashing = CharacterMotorDashing();
 var sliding : CharacterMotorSliding = CharacterMotorSliding();
 
 @System.NonSerialized
-var grounded : boolean = true;
+public var grounded : boolean = true;
 
 @System.NonSerialized
 var groundNormal : Vector3 = Vector3.zero;
@@ -381,7 +381,7 @@ private function UpdateFunction () {
 				jumping.holdingJumpButton = false;
 			}
 		}
-		
+
 		// We were grounded but just loosed grounding
 		if (grounded && !IsGroundedTest()) {
 			grounded = false;
@@ -417,7 +417,7 @@ private function UpdateFunction () {
 				animator.SetBool("falling", false);
 			}
 			
-			SendMessage("OnLand", SendMessageOptions.DontRequireReceiver);
+			player.SendMessage("OnLand", SendMessageOptions.DontRequireReceiver);
 			//GameObject.Find("Camera").GetComponent(SmoothFollow).enabled = true;
 		}
 		

@@ -39,10 +39,16 @@ public class PlayerScript : MonoBehaviour {
 	private float distanceFloat = 0f;
 	
 	public string distanceString;
-	
+
+	public AudioSource rightFootSound;
+	public AudioSource leftFootSound;
+
+	public AudioClip[] footStepSounds;
+
 	// Use this for initialization
 	void Start () {
-		
+
+		CharacterMotor cMotor  = transform.root.gameObject.GetComponent<CharacterMotor>();
 		root = this.transform.root.gameObject;
 		//rootScript = root.GetComponent<PlayerScript>();
 		
@@ -109,7 +115,69 @@ public class PlayerScript : MonoBehaviour {
 		cMotor.
 			SetVelocity(new Vector3(cMotor.movement.velocity.x +, 1 * 20, cMotor.movement.velocity.z));
 	}*/
-	
+
+	void OnLand()
+	{
+		Debug.Log("OnLand");
+		rightFootSound.clip = footStepSounds[Random.Range(0, 7)];
+		rightFootSound.pitch = 0.8f;
+		rightFootSound.volume = 1;
+		rightFootSound.Play();
+
+		leftFootSound.clip = footStepSounds[Random.Range(0, 7)];
+		leftFootSound.pitch = 0.8f;
+		leftFootSound.volume = 1;
+		leftFootSound.Play();
+	}
+
+	void RightStep()
+	{
+		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
+		if(cMotor.grounded)
+		{
+			rightFootSound.clip = footStepSounds[Random.Range(0, 7)];
+			rightFootSound.pitch = Random.Range(0.9f, 1.1f);
+			rightFootSound.volume = 0.3f;
+			rightFootSound.Play();
+		}
+	}
+
+	void LeftStep()
+	{
+		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
+		if(cMotor.grounded)
+		{
+			leftFootSound.clip = footStepSounds[Random.Range(0, 7)];
+			leftFootSound.pitch = Random.Range(0.9f, 1.1f);
+			leftFootSound.volume = 0.3f;
+			leftFootSound.Play();
+		}
+	}
+
+	void RightRunStep()
+	{
+		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
+		if(cMotor.grounded)
+		{
+			rightFootSound.clip = footStepSounds[Random.Range(0, 7)];
+			rightFootSound.pitch = Random.Range(0.9f, 1.1f);
+			rightFootSound.volume = 0.35f;
+			rightFootSound.Play();
+		}
+	}
+
+	void LeftRunStep()
+	{
+		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
+		if(cMotor.grounded)
+		{
+			leftFootSound.clip = footStepSounds[Random.Range(0, 7)];
+			leftFootSound.pitch = Random.Range(0.9f, 1.1f);
+			leftFootSound.volume = 0.35f;
+			leftFootSound.Play();
+		}
+	}
+
 	void StopDashAttack()
 	{
 			
@@ -156,7 +224,7 @@ public class PlayerScript : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		
-		CharacterMotor cMotor  = transform.root.gameObject.GetComponent<CharacterMotor>();
+		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
 		if(cMotor.dash.dashingActive)
 		{
 			//Debug.Log ("DashCollision: " + other.name);	
