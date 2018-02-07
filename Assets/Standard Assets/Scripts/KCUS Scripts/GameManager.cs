@@ -513,7 +513,7 @@ public class GameManager : MonoBehaviour {
 	
 	public void AddGems(int amount)
 	{
-		gemCount += 1;
+		gemCount += amount;
 		gemString = gemCount.ToString();
 	}
 	

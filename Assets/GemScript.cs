@@ -12,7 +12,11 @@ public class GemScript : MonoBehaviour {
 	GameManager gameManager;
 	
 	private bool gemLerping = false;
-	
+
+	public AudioSource collectSound;
+
+	bool collected = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -32,20 +36,25 @@ public class GemScript : MonoBehaviour {
 	
 	public void GemCollect()
 	{
-		if(objectPool != null)
+		if(!collected)
 		{
+			collected = true;
+			if(objectPool != null)
+			{
+				
+			}
+			else
+			{
+				objectPool = GameObject.Find("ObjectPool");	
+			}
+			//GameObject v;
 			
+			//v = ObjectPool.instance.GetObjectForType("GemCollectFX", false);
+			
+			//v.transform.position = this.transform.position;
+			collectSound.Play();
+			StartCoroutine(GemLerp());
 		}
-		else
-		{
-			objectPool = GameObject.Find("ObjectPool");	
-		}
-		//GameObject v;
-		
-		//v = ObjectPool.instance.GetObjectForType("GemCollectFX", false);
-		
-		//v.transform.position = this.transform.position;
-		StartCoroutine(GemLerp());
 	}
 	
 	public IEnumerator GemLerp()
@@ -67,7 +76,7 @@ public class GemScript : MonoBehaviour {
 				yield return null;
 			}	
 			
-			if(this.name == "SupGemPrefab")
+			if(this.tag == "SuperGem")
 			{
 				gameManager.AddGems(10);
 			}
@@ -107,6 +116,7 @@ public class GemScript : MonoBehaviour {
 	{
 		this.GetComponent<Renderer>().enabled = true;
 		gemLerping = false;
+		collected = false;
 	}
 		
 }

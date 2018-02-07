@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour {
 	CharacterMotor cMotor;
 	
 	GameObject root;
+	//PlayerScript rootScript;
 	
 	int playerLayer = 11;
 	
@@ -43,6 +44,7 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 		
 		root = this.transform.root.gameObject;
+		//rootScript = root.GetComponent<PlayerScript>();
 		
 		playerPos = GameObject.Find ("PlayerPos");
 		
@@ -181,9 +183,36 @@ public class PlayerScript : MonoBehaviour {
 			v.transform.position = this.transform.position;
 			
 			v.SendMessage("PlayFX", "GemCollect");
-			
+
 			//v.transform.parent = this.transform;
-			
+			//rootScript.soundFX.clip = stdGemCollectSound;
+			//rootScript.soundFX.Play();
+			other.SendMessage("GemCollect");
+		}
+		else if(other.tag == "SuperGem")
+		{
+			//rigidbody.AddForce (Vector3.up * 100000, ForceMode.Impulse);
+
+			//transform.root.gameObject.SendMessage("Animate", "jumping");
+			//CharacterMotor cController = this.transform.root.gameObject.GetComponent<CharacterMotor>();
+
+			//cController.SimpleMove(Vector3.up * 1000);
+			//cController.rigidbody.AddForce(Vector3.up * 1000, ForceMode.VelocityChange);
+
+			//cController.SetVelocity(new Vector3(cController.movement.velocity.x, Vector3.up.y * 30, cController.movement.velocity.z));
+
+
+			GameObject v;
+
+			v = ObjectPool.instance.GetObjectForType("AnimatedSpriteFX", false);
+
+			v.transform.position = this.transform.position;
+
+			v.SendMessage("PlayFX", "GemCollect");
+
+			//v.transform.parent = this.transform;
+			//rootScript.soundFX.clip = supGemCollectSound;
+			//rootScript.soundFX.Play();
 			other.SendMessage("GemCollect");
 		}
 		else if(other.tag == "Enemy" && this.name != "Player")
