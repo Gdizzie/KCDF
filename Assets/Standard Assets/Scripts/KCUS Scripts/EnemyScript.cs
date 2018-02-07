@@ -15,7 +15,7 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+		deathSound.transform.parent = this.transform;
 		storedDamager = this.gameObject;
 		
 		//objectPool = ObjectPool.instance.gameObject;
@@ -73,7 +73,6 @@ public class EnemyScript : MonoBehaviour {
 		//REFACTOR TO AUDIOSOURCE
 		deathSound.Play();
 		deathSound.transform.parent = null;
-		Destroy(deathSound, 10f);
 		GameObject v;
 		v = ObjectPool.instance.GetObjectForType("AnimatedSpriteFX", false);
 			
