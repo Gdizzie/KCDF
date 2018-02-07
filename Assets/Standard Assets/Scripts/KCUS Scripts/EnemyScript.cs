@@ -70,8 +70,10 @@ public class EnemyScript : MonoBehaviour {
 	
 	void DestroyEnemy()
 	{
+		//REFACTOR TO AUDIOSOURCE
 		deathSound.Play();
 		deathSound.transform.parent = null;
+		Destroy(deathSound, 10f);
 		GameObject v;
 		v = ObjectPool.instance.GetObjectForType("AnimatedSpriteFX", false);
 			

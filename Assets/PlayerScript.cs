@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour {
 	CharacterMotor cMotor;
 	
 	GameObject root;
-	//PlayerScript rootScript;
+	PlayerScript rootScript;
 	
 	int playerLayer = 11;
 	
@@ -40,17 +40,21 @@ public class PlayerScript : MonoBehaviour {
 	
 	public string distanceString;
 
-	public AudioSource rightFootSound;
-	public AudioSource leftFootSound;
+	public AudioSource rightFootAudioSource;
+	public AudioSource leftFootAudioSource;
 
 	public AudioClip[] footStepSounds;
+
+	public AudioClip deathSound;
+
+	public AudioSource mouthAudioSource;
 
 	// Use this for initialization
 	void Start () {
 
 		CharacterMotor cMotor  = transform.root.gameObject.GetComponent<CharacterMotor>();
 		root = this.transform.root.gameObject;
-		//rootScript = root.GetComponent<PlayerScript>();
+		rootScript = root.GetComponent<PlayerScript>();
 		
 		playerPos = GameObject.Find ("PlayerPos");
 		
@@ -119,15 +123,15 @@ public class PlayerScript : MonoBehaviour {
 	void OnLand()
 	{
 		Debug.Log("OnLand");
-		rightFootSound.clip = footStepSounds[Random.Range(0, 7)];
-		rightFootSound.pitch = 0.8f;
-		rightFootSound.volume = 1;
-		rightFootSound.Play();
+		rightFootAudioSource.clip = footStepSounds[Random.Range(0, 7)];
+		rightFootAudioSource.pitch = 0.8f;
+		rightFootAudioSource.volume = 1;
+		rightFootAudioSource.Play();
 
-		leftFootSound.clip = footStepSounds[Random.Range(0, 7)];
-		leftFootSound.pitch = 0.8f;
-		leftFootSound.volume = 1;
-		leftFootSound.Play();
+		leftFootAudioSource.clip = footStepSounds[Random.Range(0, 7)];
+		leftFootAudioSource.pitch = 0.8f;
+		leftFootAudioSource.volume = 1;
+		leftFootAudioSource.Play();
 	}
 
 	void RightStep()
@@ -135,10 +139,10 @@ public class PlayerScript : MonoBehaviour {
 		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
 		if(cMotor.grounded)
 		{
-			rightFootSound.clip = footStepSounds[Random.Range(0, 7)];
-			rightFootSound.pitch = Random.Range(0.9f, 1.1f);
-			rightFootSound.volume = 0.3f;
-			rightFootSound.Play();
+			rightFootAudioSource.clip = footStepSounds[Random.Range(0, 7)];
+			rightFootAudioSource.pitch = Random.Range(0.9f, 1.1f);
+			rightFootAudioSource.volume = 0.3f;
+			rightFootAudioSource.Play();
 		}
 	}
 
@@ -147,10 +151,10 @@ public class PlayerScript : MonoBehaviour {
 		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
 		if(cMotor.grounded)
 		{
-			leftFootSound.clip = footStepSounds[Random.Range(0, 7)];
-			leftFootSound.pitch = Random.Range(0.9f, 1.1f);
-			leftFootSound.volume = 0.3f;
-			leftFootSound.Play();
+			leftFootAudioSource.clip = footStepSounds[Random.Range(0, 7)];
+			leftFootAudioSource.pitch = Random.Range(0.9f, 1.1f);
+			leftFootAudioSource.volume = 0.3f;
+			leftFootAudioSource.Play();
 		}
 	}
 
@@ -159,10 +163,10 @@ public class PlayerScript : MonoBehaviour {
 		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
 		if(cMotor.grounded)
 		{
-			rightFootSound.clip = footStepSounds[Random.Range(0, 7)];
-			rightFootSound.pitch = Random.Range(0.9f, 1.1f);
-			rightFootSound.volume = 0.35f;
-			rightFootSound.Play();
+			rightFootAudioSource.clip = footStepSounds[Random.Range(0, 7)];
+			rightFootAudioSource.pitch = Random.Range(0.9f, 1.1f);
+			rightFootAudioSource.volume = 0.35f;
+			rightFootAudioSource.Play();
 		}
 	}
 
@@ -171,10 +175,10 @@ public class PlayerScript : MonoBehaviour {
 		CharacterMotor cMotor  = transform.root.GetComponent<CharacterMotor>();
 		if(cMotor.grounded)
 		{
-			leftFootSound.clip = footStepSounds[Random.Range(0, 7)];
-			leftFootSound.pitch = Random.Range(0.9f, 1.1f);
-			leftFootSound.volume = 0.35f;
-			leftFootSound.Play();
+			leftFootAudioSource.clip = footStepSounds[Random.Range(0, 7)];
+			leftFootAudioSource.pitch = Random.Range(0.9f, 1.1f);
+			leftFootAudioSource.volume = 0.35f;
+			leftFootAudioSource.Play();
 		}
 	}
 
@@ -202,6 +206,15 @@ public class PlayerScript : MonoBehaviour {
 	void Animate(string state)
 	{
 		animator.SetBool(state, true);	
+	}
+
+	public void Kill()
+	{
+		rootScript.mouthAudioSource.transform.parent = null;
+		rootScript.mouthAudioSource.Play();
+		Destroy(rootScript.mouthAudioSource, 10f);
+		Debug.Log ("SendRagdolExec: " + this.gameObject.layer);
+		this.transform.root.gameObject.SendMessage("ExecuteRagdoll");	
 	}
 	
 	void Cleanup()
@@ -329,8 +342,7 @@ public class PlayerScript : MonoBehaviour {
 					}
 					else if(this.name != "Player")
 					{
-						Debug.Log ("SendRagdolExec: " + this.gameObject.layer);
-						this.transform.root.gameObject.SendMessage("ExecuteRagdoll");	
+						Kill();
 					}
 				}
 				
@@ -357,8 +369,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 		else if(other.tag == "Hazard")
 		{
-			Debug.Log ("SendRagdolExec: " + this.gameObject.layer);
-			this.transform.root.gameObject.SendMessage("ExecuteRagdoll");	
+			Kill();	
 		}
 		
 	}
@@ -416,8 +427,7 @@ public class PlayerScript : MonoBehaviour {
 					}
 					else if(this.name != "Player")
 					{
-						Debug.Log ("SendRagdolExec: " + this.gameObject.layer);
-						this.transform.root.gameObject.SendMessage("ExecuteRagdoll");	
+						Kill();
 					}
 				}
 				

@@ -105,6 +105,7 @@ public class GemScript : MonoBehaviour {
 				else
 				{
 					this.transform.position = origPos;
+					collected = false;
 					gemLerping = false;
 				}
 			}
