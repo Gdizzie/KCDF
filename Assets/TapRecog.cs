@@ -22,11 +22,7 @@ public class TapRecog : MonoBehaviour {
 	int playerInvincibleLayer = 12;
 	
 	MenuManager menuManager;
-
-	bool dashing = false;
-
-	PlayerScript playerScript;
-
+	
 	//GameObject testText;
 	
 	// Use this for initialization
@@ -38,7 +34,7 @@ public class TapRecog : MonoBehaviour {
 		
 		player = GameObject.Find ("Player");
 		//testText = GameObject.Find ("TestText");
-		playerScript = player.GetComponent<PlayerScript>();
+		
 	}
 	
 	void OnTap(TapGesture gesture) { 
@@ -54,10 +50,7 @@ public class TapRecog : MonoBehaviour {
 	void OnFingerDown(FingerDownEvent e) { 
 		
 	//	e.Position
-		/*cMotor = player.GetComponent<CharacterMotor>();
-		cMotor.jumping.enabled = true;
-		if(menuManager.paused)
-			return;*/
+		
 		
 		
 		//Debug.Log ("FingerDown at: " + e.Position);
@@ -90,7 +83,6 @@ public class TapRecog : MonoBehaviour {
 				Destroy(GameObject.FindGameObjectWithTag("Ragdoll").gameObject);
 				player = Instantiate(playerPrefab, GameObject.Find("SpawnPoint").transform.position, Quaternion.Euler(0, 90, 0)) as GameObject;
 				menuManager.SetPlayer(player);
-				playerScript = player.GetComponent<PlayerScript>();
 			}
 				
 			player.SendMessage ("Cleanup");
@@ -150,15 +142,7 @@ public class TapRecog : MonoBehaviour {
 				cMotor = player.GetComponent<CharacterMotor>();
 				if (cMotor.dash.dashingActive == false)
 				{
-					GameObject v;
-					v = ObjectPool.instance.GetObjectForType("AnimatedSpriteFX", false);
-					v.transform.position = player.transform.position;
-					v.SendMessage("PlayFX", "EnemyDeath");
-
-					playerScript.dashAudioSource.Play();
-
-					cMotor.Dash(new Vector3(cMotor.movement.velocity.x + 55, 0.2f, cMotor.movement.velocity.z), 0.17f, 0.25f, true);
-					dashing = true;
+					cMotor.Dash(new Vector3(cMotor.movement.velocity.x + 55, 0.2f, cMotor.movement.velocity.z), 0.17f, 0.8f, true); 
 				}
 				
 				
@@ -199,12 +183,14 @@ public class TapRecog : MonoBehaviour {
 	
 	void OnFingerUp(FingerUpEvent e) 
 	{
-		/*if(menuManager.paused)
-			return;*/
-		
-		if(dashing)
+		//Debug.Log ("FingerUp");
+		if(e.Finger.StartPosition.x > Screen.width/2 && e.Finger.StartPosition.y < Screen.height/2)// && gameManager.dashCrunchtime)
 		{
-			cMotor = player.GetComponent<CharacterMotor>();
+			//player.SendMessage("DashStop");	
+			if(!cMotor)
+			{
+				cMotor = player.GetComponent<CharacterMotor>();
+			}
 			cMotor.DashStop();
 		}
 	}
