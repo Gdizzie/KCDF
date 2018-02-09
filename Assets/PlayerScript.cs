@@ -48,6 +48,7 @@ public class PlayerScript : MonoBehaviour {
 	public AudioClip deathSound;
 
 	public AudioSource mouthAudioSource;
+	public AudioSource dashAudioSource;
 
 	// Use this for initialization
 	void Start () {
