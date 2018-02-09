@@ -216,6 +216,7 @@ var timer : float = 0.1f;
 function Start()
 {
 	animator = GetComponent(Animator);
+	jumping.enabled = true;
 }
 
 function Awake () {

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MenuManager : MonoBehaviour {
 	
-	bool paused = false;
+	public bool paused = false;
 	
 	GameObject player;
 	
@@ -52,6 +52,7 @@ public class MenuManager : MonoBehaviour {
 		spawnPoint = GameObject.Find("SpawnPoint");
 		
 		SetLayout();
+		PauseGame();
 		
 	
 	}
