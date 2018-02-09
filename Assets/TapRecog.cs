@@ -53,11 +53,9 @@ public class TapRecog : MonoBehaviour {
 	
 	void OnFingerDown(FingerDownEvent e) { 
 		
-	//	e.Position
-		/*cMotor = player.GetComponent<CharacterMotor>();
-		cMotor.jumping.enabled = true;
+	
 		if(menuManager.paused)
-			return;*/
+			return;
 		
 		
 		//Debug.Log ("FingerDown at: " + e.Position);
@@ -199,8 +197,8 @@ public class TapRecog : MonoBehaviour {
 	
 	void OnFingerUp(FingerUpEvent e) 
 	{
-		/*if(menuManager.paused)
-			return;*/
+		if(menuManager.paused)
+			return;
 		
 		if(dashing)
 		{
